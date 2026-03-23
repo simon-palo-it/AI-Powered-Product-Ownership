@@ -2,6 +2,22 @@
 
 General training activity for Product Discovery using Google Design Sprint methodology. Part of the PO with AI training module.
 
+## GitHub Pages
+
+The course landing page (`root/index.html`) is automatically published to GitHub Pages on every push to `main` via the [`.github/workflows/deploy-pages.yml`](./.github/workflows/deploy-pages.yml) workflow.
+
+**Live URL:** `https://simon-palo-it.github.io/AI-Powered-Product-Ownership/`
+
+The workflow:
+1. Checks out the repository.
+2. Configures the GitHub Pages environment.
+3. Uploads the contents of the `root/` directory as the Pages artifact.
+4. Deploys the artifact to GitHub Pages.
+
+> **One-time setup required:** In the repository **Settings → Pages → Build and deployment**, set the source to **GitHub Actions** to enable deployments.
+
+---
+
 ## DesignSprintAgent
 
 This workspace includes a custom GitHub Copilot agent — **DesignSprintAgent** — that guides a Product Owner through the first four phases of a [Google Design Sprint](https://designsprintkit.withgoogle.com/methodology/overview):
