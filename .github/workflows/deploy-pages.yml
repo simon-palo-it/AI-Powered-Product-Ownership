@@ -49,6 +49,15 @@ jobs:
 
       # 3. Bundle the contents of the root/ directory (index.html and any
       #    supporting assets) into a Pages artifact and upload it.
+      #
+      #    IMPORTANT — path mapping:
+      #      `path: root` tells the action to treat the CONTENTS of the root/
+      #      folder as the web root, NOT the folder itself. This means:
+      #
+      #        root/index.html  →  https://simon-palo-it.github.io/AI-Powered-Product-Ownership/
+      #        root/styles.css  →  https://simon-palo-it.github.io/AI-Powered-Product-Ownership/styles.css
+      #
+      #    There is no /root/ segment in the published URLs.
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -14,6 +14,18 @@ The workflow:
 3. Uploads the contents of the `root/` directory as the Pages artifact.
 4. Deploys the artifact to GitHub Pages.
 
+### URL mapping
+
+`path: root` in the workflow tells GitHub Pages to treat the **contents** of the `root/` folder as the web root — the folder name itself does not appear in the published URL. For example:
+
+| File in repository | Published URL |
+|---|---|
+| `root/index.html` | `https://simon-palo-it.github.io/AI-Powered-Product-Ownership/` |
+| `root/styles.css` | `https://simon-palo-it.github.io/AI-Powered-Product-Ownership/styles.css` |
+| `root/images/logo.png` | `https://simon-palo-it.github.io/AI-Powered-Product-Ownership/images/logo.png` |
+
+So yes — visiting `https://simon-palo-it.github.io/AI-Powered-Product-Ownership/` will serve `root/index.html` directly.
+
 > **One-time setup required:** In the repository **Settings → Pages → Build and deployment**, set the source to **GitHub Actions** to enable deployments.
 
 ---
